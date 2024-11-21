@@ -93,20 +93,17 @@ Optimiza la compilación para el mejor rendimiento.
 1. Clona este repositorio:
    ```bash
    git clone https://github.com/mleon98/admin-clientes.git
+
+# Cambiate al Directorio:
    
-## Navega al directorio del proyecto:
+cd admin-clientes
 
-```bash
-2. cd admin-clientes
+# Instala las dependencias:
 
-## Instala las dependencias:
-
-```bash
 3. npm install
 
-## Ejecuta la aplicación:
+# Ejecuta la aplicación:
 
-```bash
 4. npm start
 
 ### Licencia
