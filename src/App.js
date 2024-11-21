@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./components/Login";
+import AdminDashboard from "./components/AdminDashboard";
+import UserDashboard from "./components/UserDashboard";
+import Clientes from "./components/Clientes";
+import Usuarios from "./components/Usuarios"; // Importar Usuarios
+import Auditoria from "./components/Auditoria"; // Importar Auditoria
+import Clima from "./components/Clima";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/user-dashboard" element={<UserDashboard />} />
+        <Route path="/clientes" element={<Clientes />} />
+        <Route path="/usuarios" element={<Usuarios />} /> {/* Ruta Usuarios */}
+        <Route path="/auditoria" element={<Auditoria />} /> {/* Ruta Auditoria */}
+        <Route path="/clima" element={<Clima />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
